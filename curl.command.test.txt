@@ -1,0 +1,18 @@
+# Tạo todo
+curl -X POST http://localhost:3000/todos \
+  -H "Content-Type: application/json" \
+  -d '{"title": "Hoc Express"}'
+
+# Lấy tất cả
+curl http://localhost:3000/todos
+
+# Lấy 1 cái
+curl http://localhost:3000/todos/1
+
+# Update
+curl -X PUT http://localhost:3000/todos/1 \
+  -H "Content-Type: application/json" \
+  -d '{"completed": true}'
+
+# Xóa
+curl -X DELETE http://localhost:3000/todos/1

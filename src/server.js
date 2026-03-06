@@ -1,0 +1,13 @@
+const express   = require('express');
+const todoRoute = require('./routes/todo.route');
+const loggingMiddleware = require('./middleware/logging.middleware');
+
+const app = express();
+
+app.use(express.json()); // parse body JSON
+app.use(loggingMiddleware);
+
+app.use('/todos', todoRoute);
+
+
+app.listen(3000, () => console.log('Server running on port 3000'));
