@@ -9,5 +9,7 @@ app.use(loggingMiddleware);
 
 app.use('/todos', todoRoute);
 
+console.log("hehe 1");
+
 
 app.listen(3000, () => console.log('Server running on port 3000'));
